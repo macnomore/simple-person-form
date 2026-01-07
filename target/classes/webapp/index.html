@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Person Capture</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="badge">Simple Demo</div>
+        <h1>Capture a Person</h1>
+        <p>
+          Enter a first and last name. We’ll send JSON to Java and store it in
+          PostgreSQL.
+        </p>
+      </header>
+
+      <main class="card">
+        <form id="personForm" class="form">
+          <div class="field">
+            <label for="firstName">First name</label>
+            <input
+              id="firstName"
+              name="firstName"
+              type="text"
+              placeholder="e.g. Ian"
+              autocomplete="given-name"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input
+              id="lastName"
+              name="lastName"
+              type="text"
+              placeholder="e.g. Njagi"
+              autocomplete="family-name"
+              required
+            />
+          </div>
+
+          <button class="btn" type="submit">
+            <span>Save Person</span>
+            <span class="arrow">→</span>
+          </button>
+
+          <div
+            id="status"
+            class="status"
+            role="status"
+            aria-live="polite"
+          ></div>
+        </form>
+      </main>
+
+      <footer class="footer">
+        <span>Backend: Jetty + Servlet</span>
+        <span>DB: PostgreSQL (AWS RDS Free Tier)</span>
+      </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
